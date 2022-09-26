@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learning-app';
+  counter = 0;
+
+  add() {
+    this.counter = this.counter + 1;
+  }
+
+  sub() {
+    this.counter = this.counter - 1;
+  }
 }
