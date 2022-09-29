@@ -9,3 +9,6 @@
 
 
 To run a project `npm start` | `ng serve`
+
+
+e2e => End To end  testing

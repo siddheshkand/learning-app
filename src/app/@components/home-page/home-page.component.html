@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-4" *ngFor="let app of appList">
+
+        <div class="card" style="width: 18rem;">
+
+            <div>
+                <i [class]="app.icon" style="font-size: 4rem;color: coral;"></i>     
+            </div>
+            <!-- <i class="{{app.icon}}"></i> -->
+            <div class="card-body">
+                <h5 class="card-title">{{app.title}}</h5>
+                <p class="card-text">{{app.description}}</p>
+                <a [routerLink]="app.link" class="btn btn-primary">Go to App</a>
+            </div>
+        </div>
+    </div>
+</div>
