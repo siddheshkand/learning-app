@@ -7,6 +7,7 @@
 <ul class="list-group">
     <li *ngFor="let item of listOfItems" class="list-group-item">
         <input class="form-check-input" type="checkbox" [(ngModel)]="item.completed" value="" id="flexCheckDefault">
+        <!-- <input type="text" [(ngModel)]="item.taskName"> -->
         {{item.taskName}}
     </li>
 </ul>

@@ -35,13 +35,22 @@ export class TodoComponent implements OnInit {
   listOfItems: TodoI[] = [];
 
   ngOnInit(): void {
+    this.listOfItems = this.getFromLocalStorage() ?? [];
   }
 
   addItem() {
     if (this.todoTask.length > 0) {
       // this.listOfItems.push(new TodoC(this.todoTask));
-      this.listOfItems.push({completed:true,taskName: this.todoTask});
+      this.listOfItems.push({completed:false,taskName: this.todoTask});
       this.todoTask = "";
+      this.saveToLocalStorage();
     }
+  }
+
+  saveToLocalStorage(){
+    localStorage.setItem('todoList',JSON.stringify(this.listOfItems))
+  }
+  getFromLocalStorage(){
+    return JSON.parse(localStorage.getItem('todoList') as string)
   }
 }
