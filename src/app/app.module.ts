@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './@components/counter/counter.component';
 import { HomePageComponent } from './@components/home-page/home-page.component';
 import { NotFoundComponent } from './@components/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,13 @@ import { NotFoundComponent } from './@components/not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
+    // Core Angular Module
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // 3rd Party Module
+    NgbModule
+    // Custom Module
   ],
   providers: [],
   bootstrap: [AppComponent]
